@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FF7A1A" />
+  <meta name="description" content="不知道午餐晚餐吃什么？输入地点或使用定位，在网页内搜索附近真实餐厅，再让幸运转盘帮你决定。" />
+  <title>吃什么都可以｜今天吃什么？</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    
+<a class="brand" href="#top" aria-label="随便吃">
+  <span class="brand-name">
+    随便<span class="brand-orange">吃</span>
+  </span>
+</a>
+
+
+    <nav><a href="#discover">找餐厅</a><a href="#wheel">幸运转盘</a><a href="#how">怎么使用</a><a class="donate-nav" href="#donate" aria-label="随心支持 Donate">Donate</a></nav>
+    <span class="city-pill"><span class="status-dot"></span> 马来西亚 · 测试版</span>
+  </header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">
+        <span>🍜</span> YOUR DAILY FOOD DECISION HELPER
+      </span>
+
+      <h1>
+        今天吃什么？
+        <br />
+        <span>交给我们决定。</span>
+      </h1>
+
+      <p>
+        先按口味和预算找点吃饭灵感，
+        也可以直接在网页内搜索附近的真实店家。
+        还拿不定主意？让 30 种饱腹正餐转盘替你选。
+      </p>
+
+      <div class="hero-points">
+        <span>✓ 午餐晚餐都适合</span>
+        <span>✓ 网页内显示附近真实店家</span>
+        <span>✓ 选择困难救星</span>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <img
+        class="hero-ramen"
+        src="./src/ramen-hero.png"
+        alt="美味日式拉面"
+      />
+      <div class="hero-food-floats">
+        <span class="food-float food-float-one" data-art="rice-meal" data-label="彩色饭团插画"></span>
+        <span class="food-float food-float-two" data-art="nasi-lemak" data-label="椰浆饭插画"></span>
+        <span class="food-float food-float-three" data-art="noodles" data-label="面食插画"></span>
+        <span class="food-float food-float-four" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M24 3c2.8 12.2 6.8 16.2 19 19-12.2 2.8-16.2 6.8-19 19C21.2 28.8 17.2 24.8 5 22 17.2 19.2 21.2 15.2 24 3Z" fill="#ffc168"/>
+            <circle cx="7" cy="8" r="2" fill="#ff9b71"/>
+            <circle cx="40" cy="39" r="2.5" fill="#ff9b71"/>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </section>
+<section class="search-panel" id="discover">
+      <div class="section-kicker">LET'S FIND YOUR MEAL</div>
+      <div class="panel-heading"><div><h2>今天想吃什么？</h2><p>不确定也没关系，留空就帮你找附近选择。</p></div><span class="step-label">01 / FIND FOOD</span></div>
+      <div class="form-grid">
+        <label class="field field-wide"><span>想吃什么类型？</span><select id="cuisine"><option value="">什么都可以</option><option value="chinese">中餐 / 家常菜</option><option value="malay">马来餐</option><option value="indian">印度餐</option><option value="thai">泰式料理</option><option value="western">西餐 / 汉堡</option><option value="japanese">日式料理</option><option value="noodles">面食 / 粉类</option><option value="rice">饭类</option><option value="hotpot">火锅 / 麻辣烫</option><option value="healthy">健康餐 / 轻食</option><option value="seafood">海鲜 / 清蒸</option><option value="dessert">甜品 / 茶点</option><option value="cafe">咖啡馆</option></select></label>
+        <label class="field"><span>每人预算（RM）</span><div class="input-wrap"><span>RM</span><input id="budget" type="number" min="1" max="500" placeholder="例如 15（可留空）"></div></label>
+        <label class="field"><span>搜索范围</span><select id="radius"><option value="3">3 公里</option><option value="5">5 公里</option><option value="10">10 公里</option><option value="15">15 公里</option><option value="20">20 公里</option><option value="25">25 公里</option></select></label>
+      </div>
+      <div class="quick-budgets"><span>快速预算：</span><button data-budget="10">RM10</button><button data-budget="15">RM15</button><button data-budget="20">RM20</button><button data-budget="30">RM30</button><button id="clearBudget" class="clear-btn">不限预算</button></div>
+      <div class="panel-actions"><button class="btn btn-primary" id="searchBtn">给我吃饭灵感 <span>→</span></button><button class="btn btn-light" id="locateBtn">⌖ 搜索我附近的美食</button><label class="manual-location-search" for="locationInput"><span>输入城市、地区或地址</span><div class="manual-location-controls"><input id="locationInput" type="search" placeholder="例如：Taman Molek、KLCC、槟城乔治市" autocomplete="street-address"><button class="btn btn-light" id="searchLocationBtn" type="button">在网页找附近美食</button></div></label><span id="locationStatus" class="location-status">使用免费的 OpenStreetMap 地图资料查找附近餐饮地点。</span></div>
+    </section>
+
+    <section class="results-section" id="results">
+      <div class="results-title"><div><div class="section-kicker">FOOD INSPIRATION</div><h2>先找点吃饭灵感？</h2><p id="resultSummary">以下餐厅名称、价格和距离均为示范资料。</p></div><div class="sort-wrap"><label for="sort">排序方式</label><select id="sort"><option value="recommended">推荐排序</option><option value="price">价格由低到高</option><option value="price-desc">价格由高到低</option><option value="distance">距离由近到远</option><option value="distance-desc">距离由远到近</option><option value="time">抵达时间最短</option><option value="time-desc">抵达时间最长</option></select></div></div>
+      <div class="notice" id="resultsNotice"><span>ⓘ</span> 下方餐厅、价格和距离是示范资料，不代表真实附近商家；搜索后会在网页中显示 OpenStreetMap 中登记的餐饮地点。</div>
+      <div class="map-attribution hidden" id="mapAttribution"><span>地图资料 ©</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap 贡献者</a><span>依照 Open Database License (ODbL) 使用；资料可能不完整。</span></div>
+      <div class="restaurant-grid" id="restaurantGrid" aria-live="polite"></div>
+      <div class="restaurant-more hidden" id="restaurantMore">
+        <button class="restaurant-more-button" id="restaurantMoreButton" type="button" aria-controls="restaurantGrid" aria-expanded="false">
+          <span id="restaurantMoreText">展开更多餐厅</span><span class="restaurant-more-icon" aria-hidden="true">⌄</span>
+        </button>
+        <p>往下还有更多吃饭灵感，点这里展开</p>
+      </div>
+      <div class="empty-state hidden" id="emptyState"><div>🍽️</div><h3>价钱那么低，找不到东西吃啦！</h3><p>可以考虑吃同事的饭，哈哈哈哈。</p><button class="btn btn-light" id="resetFilters">清除筛选</button></div>
+    </section>
+
+    <section class="wheel-section" id="wheel">
+      <div class="wheel-copy">
+        <div class="section-kicker">CAN'T MAKE A DECISION?</div>
+        <h2>选择困难？<br><span>让幸运转盘决定！</span></h2>
+        <p>自己列想吃的，或把附近筛选出来的餐厅放进转盘，让今天的选择交给好运气。</p>
+        <div class="wheel-mode-switch" role="tablist" aria-label="转盘内容来源">
+          <button class="wheel-mode active" id="customModeBtn" type="button" role="tab" aria-selected="true" aria-controls="customWheelPanel">自己输入</button>
+          <button class="wheel-mode" id="nearbyModeBtn" type="button" role="tab" aria-selected="false" aria-controls="nearbyWheelPanel">当前推荐</button>
+          <button class="wheel-mode" id="malaysianModeBtn" type="button" role="tab" aria-selected="false" aria-controls="malaysianWheelPanel">随机马来西亚美食</button>
+        </div>
+        <div class="wheel-mode-panel" id="customWheelPanel" role="tabpanel" aria-labelledby="customModeBtn">
+          <label class="wheel-input-label" for="customWheelItems">把想吃的食物写下来（每行一个，也可以用逗号分开）</label>
+          <textarea id="customWheelItems" rows="3" placeholder="例如：鸡饭&#10;火锅&#10;寿司"></textarea>
+          <p class="wheel-hint" id="customWheelHint">至少输入 2 个选项，转盘才更有悬念。</p>
+        </div>
+        <div class="wheel-mode-panel hidden" id="nearbyWheelPanel" role="tabpanel" aria-labelledby="nearbyModeBtn">
+          <p class="wheel-nearby-summary" id="wheelNearbySummary">还没有餐厅加入转盘。</p>
+          <p class="wheel-hint">加入当前餐厅列表；搜索附近真实地点后，也可以把真实店名放进转盘。</p>
+          <button class="btn btn-light" id="syncWheelBtn" type="button">加入当前餐厅</button>
+        </div>
+        <div class="wheel-mode-panel hidden" id="malaysianWheelPanel" role="tabpanel" aria-labelledby="malaysianModeBtn">
+          <p class="wheel-hint">找不到附近餐厅也没关系！从马来西亚与亚洲各地的饱腹正餐中随机挑 30 种上轮盘，面、饭、快餐、日本、韩国、泰国料理都有。</p>
+          <p class="wheel-nearby-summary" id="malaysianWheelSummary">还没有加入美食。</p>
+          <button class="btn btn-light" id="randomMalaysianBtn" type="button">随机加入 30 种正餐</button>
+        </div>
+        <button class="btn btn-primary" id="spinBtn" type="button">开始转盘 <span>↗</span></button>
+        <p class="wheel-result" id="wheelResult" aria-live="polite">输入选项或加入当前推荐，开始抽签吧！</p>
+      </div>
+      <div class="wheel-visual"><div class="pointer"></div><div class="wheel" id="wheelGraphic"><div class="wheel-segments" id="wheelSegments" aria-hidden="true"></div><button class="wheel-center" id="wheelCenter" type="button" aria-label="开始转盘">转<br>起来</button></div><div class="wheel-shadow"></div></div>
+    </section>
+
+    <section class="how-section" id="how">
+      <div class="section-kicker">HOW IT WORKS</div>
+      <h2>三步，轻松决定今天吃什么</h2>
+      <div class="how-grid">
+        <article><span>01</span><h3>选喜欢的食物</h3><p>挑选料理类型，或先看示范推荐找灵感。</p></article>
+        <article><span>02</span><h3>找附近地图地点</h3><p>允许设备定位，或输入城市、地区和地址；网页会查询 OpenStreetMap 登记的餐饮地点。</p></article>
+        <article><span>03</span><h3>让幸运转盘决定</h3><p>加入当前推荐、随机抽 30 种饱腹正餐，或自己输入选项。</p></article>
+      </div>
+    </section>
+</main>
+
+  <div class="winner-overlay hidden" id="winnerOverlay">
+    <div class="celebration-layer" id="celebrationLayer" aria-hidden="true"></div>
+    <section class="winner-dialog" role="dialog" aria-modal="true" aria-labelledby="winnerTitle" aria-describedby="winnerDescription">
+      <button class="winner-close" id="closeWinnerBtn" type="button" aria-label="关闭中奖结果">×</button>
+      <div class="winner-sparkles" aria-hidden="true">✦　✧　✦</div>
+      <div class="winner-eyebrow">LUCKY PICK</div>
+      <div class="winner-icon" id="winnerIcon" aria-hidden="true">🎉</div>
+      <h2 id="winnerTitle">抽中啦！</h2>
+      <p class="winner-name" id="winnerName"></p>
+      <p class="winner-description" id="winnerDescription"></p>
+      <a class="btn btn-primary winner-map hidden" id="winnerMapBtn" href="#" target="_blank" rel="noopener noreferrer">在地图查看地点 ↗</a>
+      <button class="btn btn-primary winner-confirm" id="winnerConfirmBtn" type="button">好耶，今天吃这个！</button>
+    </section>
+  </div>
+
+  <section class="donate-section" id="donate" aria-labelledby="donateTitle">
+    <div class="donate-copy">
+      <div class="section-kicker">SUPPORT THIS LITTLE PROJECT</div>
+      <h2 id="donateTitle">今天吃什么解决了吗？</h2>
+      <p>如果这个小工具帮你决定了午餐或晚餐，欢迎随心支持一下，RM1 或更多都很感谢。你的支持会帮我继续把它做好；当然，不捐也没关系，照样欢迎来找吃的！</p>
+      <p class="donate-thanks">请我吃一口电子鸡饭，我就有动力继续更新啦 ♡</p>
+    </div>
+    <div class="donate-qr-card">
+      <img class="donate-qr-image" src="./src/tng-qr.png" alt="Touch ’n Go Malaysia National QR 捐款码" width="364" height="406" />
+      <span>可用银行或电子钱包 App 扫码支持</span>
+    </div>
+  </section>
+
+  <footer><a class="brand" href="#top"><span class="brand-mark">吃</span>
+<span class="brand-name">随便<span class="brand-orange">吃</span></span></a><p>让每一餐，都更容易决定。<br><a class="footer-donate" href="#donate">喜欢这个小工具？随心支持 Donate ↗</a><br><span class="footer-feedback">有反馈或想改进的地方？欢迎 <a href="mailto:limjoonwei123@gmail.com">Email 联系我</a></span><br><small>Prototype · Malaysia</small></p></footer>
+  <script src="./src/app.js"></script>
+</body>
+</html>
