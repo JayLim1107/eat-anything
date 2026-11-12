@@ -1,20 +1,20 @@
 const demoRestaurants = [
   {id:1,name:'鸡会算命饭档',type:'rice',typeName:'马来西亚餐 · 海南鸡饭',mapQuery:'Hainanese chicken rice',price:9.5,distance:1.2,minutes:5,art:'chicken-rice',dish:'海南鸡饭 RM9.50'},
-  {id:2,name:'椰香饭堂',type:'malay',typeName:'马来餐 · 椰浆饭',price:8,distance:2.1,minutes:8,art:'nasi-lemak',dish:'椰浆饭 RM8.00'},
-  {id:3,name:'云吞面王',type:'noodles',typeName:'面食 · 云吞面',price:10,distance:3.4,minutes:10,art:'noodles',dish:'云吞面 RM10.00'},
-  {id:4,name:'照烧丼饭屋',type:'japanese',typeName:'日式料理 · 丼饭',price:18,distance:4.8,minutes:13,art:'donburi',dish:'鸡肉蔬菜丼饭 RM18.00'},
-  {id:5,name:'巨无霸汉堡店',type:'western',typeName:'西餐 · 汉堡',price:22,distance:6.2,minutes:16,art:'burger',dish:'经典牛肉汉堡 RM22.00'},
-  {id:6,name:'香脆咖喱角铺',type:'indian',typeName:'印度餐 · 咖喱角',price:7.5,distance:2.8,minutes:9,art:'curry-puff',dish:'香脆咖喱角套餐 RM7.50'},
+  {id:2,name:'椰香饭堂',type:'malay',typeName:'马来餐 · 椰浆饭',mapQuery:'nasi lemak',price:8,distance:2.1,minutes:8,art:'nasi-lemak',dish:'椰浆饭 RM8.00'},
+  {id:3,name:'云吞面王',type:'noodles',typeName:'面食 · 云吞面',mapQuery:'wonton mee',price:10,distance:3.4,minutes:10,art:'noodles',dish:'云吞面 RM10.00'},
+  {id:4,name:'照烧丼饭屋',type:'japanese',typeName:'日式料理 · 丼饭',mapQuery:'donburi',price:18,distance:4.8,minutes:13,art:'donburi',dish:'鸡肉蔬菜丼饭 RM18.00'},
+  {id:5,name:'巨无霸汉堡店',type:'western',typeName:'西餐 · 汉堡',mapQuery:'burger',price:22,distance:6.2,minutes:16,art:'burger',dish:'经典牛肉汉堡 RM22.00'},
+  {id:6,name:'香脆咖喱角铺',type:'indian',typeName:'印度餐 · 咖喱角',mapQuery:'curry puff',price:7.5,distance:2.8,minutes:9,art:'curry-puff',dish:'香脆咖喱角套餐 RM7.50'},
   {id:7,name:'杂菜饭配料研究所',type:'rice',typeName:'马来西亚餐 · 杂菜饭',mapQuery:'economy rice',price:11,distance:1.9,minutes:7,art:'rice-meal',dish:'杂菜饭 RM11.00'},
-  {id:8,name:'轻食沙拉屋',type:'healthy',typeName:'健康餐 · 轻食套餐',price:16,distance:5.6,minutes:15,art:'salad',dish:'鸡胸沙拉套餐 RM16.00'},
-  {id:9,name:'清蒸海鲜坊',type:'seafood',typeName:'海鲜 · 清蒸',price:24,distance:7.1,minutes:18,art:'fish',dish:'清蒸鲈鱼 RM24.00'},
-  {id:10,name:'草莓奶酪屋',type:'dessert',typeName:'甜品 · 茶点',price:12,distance:3.9,minutes:12,art:'cake',dish:'草莓奶酪 RM12.00'},
-  {id:11,name:'三明治咖啡馆',type:'cafe',typeName:'咖啡馆 · 轻食',price:19,distance:8.4,minutes:21,art:'sandwich',dish:'三明治套餐 RM19.00'},
-  {id:12,name:'热锅火锅店',type:'hotpot',typeName:'火锅 · 火锅拼盘',price:27,distance:9.4,minutes:22,art:'hotpot',dish:'火锅拼盘 RM27.00'},
-  {id:13,name:'招牌炒面档',type:'noodles',typeName:'面食 · 炒面',price:13,distance:4.1,minutes:11,art:'fried-noodles',dish:'招牌炒面 RM13.00'},
-  {id:14,name:'养生蔬食铺',type:'healthy',typeName:'健康餐 · 素食',price:17,distance:6.8,minutes:17,art:'veggie-meal',dish:'养生蔬食套餐 RM17.00'},
-  {id:15,name:'烧烤海盗店',type:'western',typeName:'西餐 · 烧烤',price:26,distance:7.8,minutes:20,art:'bbq',dish:'烧烤拼盘 RM26.00'},
-  {id:16,name:'冰柠茶铺',type:'dessert',typeName:'甜品 · 冰饮',price:11,distance:2.6,minutes:8,art:'lemon-tea',dish:'冰柠茶 RM11.00'},
+  {id:8,name:'轻食沙拉屋',type:'healthy',typeName:'健康餐 · 轻食套餐',mapQuery:'salad',price:16,distance:5.6,minutes:15,art:'salad',dish:'鸡胸沙拉套餐 RM16.00'},
+  {id:9,name:'清蒸海鲜坊',type:'seafood',typeName:'海鲜 · 清蒸',mapQuery:'steamed fish',price:24,distance:7.1,minutes:18,art:'fish',dish:'清蒸鲈鱼 RM24.00'},
+  {id:10,name:'草莓奶酪屋',type:'dessert',typeName:'甜品 · 茶点',mapQuery:'cheesecake',price:12,distance:3.9,minutes:12,art:'cake',dish:'草莓奶酪 RM12.00'},
+  {id:11,name:'三明治咖啡馆',type:'cafe',typeName:'咖啡馆 · 轻食',mapQuery:'sandwich cafe',price:19,distance:8.4,minutes:21,art:'sandwich',dish:'三明治套餐 RM19.00'},
+  {id:12,name:'热锅火锅店',type:'hotpot',typeName:'火锅 · 火锅拼盘',mapQuery:'steamboat',price:27,distance:9.4,minutes:22,art:'hotpot',dish:'火锅拼盘 RM27.00'},
+  {id:13,name:'招牌炒面档',type:'noodles',typeName:'面食 · 炒面',mapQuery:'fried noodles',price:13,distance:4.1,minutes:11,art:'fried-noodles',dish:'招牌炒面 RM13.00'},
+  {id:14,name:'养生蔬食铺',type:'healthy',typeName:'健康餐 · 素食',mapQuery:'vegetarian restaurant',price:17,distance:6.8,minutes:17,art:'veggie-meal',dish:'养生蔬食套餐 RM17.00'},
+  {id:15,name:'烧烤海盗店',type:'western',typeName:'西餐 · 烧烤',mapQuery:'barbecue',price:26,distance:7.8,minutes:20,art:'bbq',dish:'烧烤拼盘 RM26.00'},
+  {id:16,name:'冰柠茶铺',type:'dessert',typeName:'甜品 · 冰饮',mapQuery:'iced lemon tea',price:11,distance:2.6,minutes:8,art:'lemon-tea',dish:'冰柠茶 RM11.00'},
   {id:17,name:'虾到你回头面馆',type:'noodles',typeName:'马来西亚面食 · 虾面',mapQuery:'prawn mee',price:12,distance:1.5,minutes:6,art:'noodles',dish:'福建虾面 RM12.00'},
   {id:18,name:'咖喱面面俱到',type:'noodles',typeName:'马来西亚面食 · 咖喱面',mapQuery:'curry mee',price:11.5,distance:2.3,minutes:8,art:'noodles',dish:'咖喱面 RM11.50'},
   {id:19,name:'炒粿条不粘锅档',type:'noodles',typeName:'马来西亚面食 · 炒粿条',mapQuery:'char kway teow',price:10,distance:3.1,minutes:10,art:'fried-noodles',dish:'炒粿条 RM10.00'},
@@ -41,6 +41,20 @@ let nearbyCacheCenter = null;
 let nearbyCacheRadius = 0;
 const geocodeCache = new Map();
 let radiusSearchTimer = null;
+let budgetInputTimer = null;
+let livePlacesTotal = 0;
+const MAX_LIVE_RESULTS = 60;
+const MAX_WHEEL_ITEMS = 20;
+const DEFAULT_RADIUS = '3';
+const reducedMotion = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : {matches:false};
+const shortPlaceName = (displayName, fallback) => {
+  const parts = String(displayName || '').split(',').map(part => part.trim()).filter(Boolean);
+  return parts.length ? parts.slice(0, 2).join(', ') : fallback;
+};
+// 在 https://myprojects.geoapify.com 免费注册后，把 API key 填在这里（不用绑信用卡）。
+// 记得在 Geoapify 后台把这个 key 限制为只能从你的网址使用，因为静态网页里的 key 别人看得到。
+// 留空时会直接使用免费的 Overpass 服务（较慢、常排队）。
+const GEOAPIFY_API_KEY = '';
 const overpassEndpoints = [
   'https://overpass-api.de/api/interpreter',
   'https://overpass.kumi.systems/api/interpreter',
@@ -53,6 +67,9 @@ const escapeHtml = (value) => value.replace(/[&<>"']/g, character=>({'&':'&amp;'
 function mapsSearchUrl(item) {
   if(item.actual&&item.osmType&&item.osmId){
     return `https://www.openstreetmap.org/${encodeURIComponent(item.osmType)}/${encodeURIComponent(item.osmId)}`;
+  }
+  if(item.actual&&Number.isFinite(item.lat)&&Number.isFinite(item.lon)){
+    return `https://www.openstreetmap.org/?mlat=${item.lat}&mlon=${item.lon}#map=19/${item.lat}/${item.lon}`;
   }
   const query = item.mapQuery || item.typeName;
   return `https://www.openstreetmap.org/search?query=${encodeURIComponent(`${query} Malaysia`)}`;
@@ -113,12 +130,13 @@ function toOsmRestaurant(element,position) {
   const coords=getOsmCoordinates(element);
   if(!coords)return null;
   const tags=element.tags||{};
-  const name=(tags.name||tags['name:en']||tags['name:zh']||'').trim()||'未命名餐饮地点';
+  const name=(tags.name||tags['name:en']||tags['name:zh']||'').trim();
+  if(!name)return null;
   const typeName=getOsmTypeName(tags);
   return {
     id:`${element.type}/${element.id}`,
-    osmType:element.type,
-    osmId:element.id,
+    osmType:element.hasOsmId===false?null:element.type,
+    osmId:element.hasOsmId===false?null:element.id,
     name,
     type:tags.cuisine||tags.amenity||'restaurant',
     typeName,
@@ -182,51 +200,86 @@ function renderRestaurants(items) {
       : r.price <= budget
         ? '<span class="budget-tag">✓ 预算内</span>'
         : '<span class="budget-tag unknown">超出预算</span>';
-    return `<article class="restaurant-card"><div class="restaurant-image">${renderFoodArt(r.art || 'noodles',r.dish)}<span class="demo-label">示范资料</span></div><div class="restaurant-body"><h3 class="restaurant-name">${escapeHtml(r.name)}</h3><div class="restaurant-type">${escapeHtml(r.typeName)}</div><div class="price-line"><strong>${money(r.price)}</strong><span>／每人参考价</span></div><div class="meta-row"><span>⌖ 距离约 ${r.distance.toFixed(1)} km</span><span>🚗 约 ${r.minutes} 分钟</span></div><div class="meta-row"><span>🍽 ${escapeHtml(r.dish)}</span></div><div class="card-bottom">${tag}<a class="map-link" href="${mapsSearchUrl(r)}" target="_blank" rel="noopener">示范搜索 ↗</a></div></div></article>`;
+    return `<article class="restaurant-card"><div class="restaurant-image">${renderFoodArt(r.art || 'noodles',r.dish)}<span class="demo-label demo-label-strong">示范 · 非真实店家</span></div><div class="restaurant-body"><h3 class="restaurant-name">${escapeHtml(r.name)}</h3><div class="restaurant-type">${escapeHtml(r.typeName)}</div><div class="price-line"><strong>${money(r.price)}</strong><span>／示范参考价</span></div><div class="meta-row"><span>🍽 ${escapeHtml(r.dish.replace(/\s*RM[\d.]+\s*$/,''))}</span><span>⌖ 示范距离 ${r.distance.toFixed(1)} km</span></div><div class="card-bottom">${tag}<a class="map-link" href="${escapeHtml(mapsSearchUrl(r))}" target="_blank" rel="noopener noreferrer">在地图找这道菜 ↗</a></div></div></article>`;
   }).join('');
   $('emptyState').classList.toggle('hidden', items.length > 0);
   $('restaurantGrid').classList.toggle('hidden', items.length === 0);
-  $('emptyState').querySelector('h3').textContent = placesLoading
-    ? '正在认真寻找附近美食…'
+  const demoReason = (!livePlacesSearch && items.length === 0) ? getDemoEmptyReason() : null;
+  const emptyCopy = placesLoading
+    ? ['正在认真寻找附近美食…', '正在查找 OpenStreetMap 地图资料。免费服务人多时要排队，可能需要 30–60 秒，请别关闭页面。']
     : placesError
-      ? '免费地图查询服务暂时无法载入'
+      ? ['免费地图查询服务暂时无法载入', '免费的公开地图查询服务可能繁忙或暂时无法连接，请稍后重试。']
       : placesNoResults
-        ? '这个范围内暂时没有找到地图登记的餐饮地点'
+        ? ['这个范围内暂时没有找到地图登记的餐饮地点', '地图资料可能不完整；试试扩大公里数、换个地点或清除料理筛选。']
         : livePlacesSearch
-          ? '没有找到符合条件的餐饮地点'
-    : '价钱那么低，找不到东西吃啦！';
-  $('emptyState').querySelector('p').textContent = placesLoading
-    ? '正在查找 OpenStreetMap 地图资料，请稍等。'
-    : placesError
-      ? '免费的公开地图查询服务可能繁忙或暂时无法连接，请稍后重试。'
-      : placesNoResults
-        ? '地图资料可能不完整；试试扩大公里数、换个地点或清除料理筛选。'
-        : livePlacesSearch
-          ? '试试清除料理筛选或换个地点；也可以用转盘随机抽正餐。'
-    : '可以考虑吃同事的饭，哈哈哈哈。';
-  const canExpand = items.length > 2;
+          ? ['没有找到符合条件的餐饮地点', '试试清除料理筛选或换个地点；也可以用转盘随机抽正餐。']
+          : demoReason === 'budget'
+            ? ['价钱那么低，找不到东西吃啦！', '可以考虑吃同事的饭，哈哈哈哈。或者把预算调高一点再试试。']
+            : demoReason === 'radius'
+              ? ['这个范围内没有这类示范餐厅', '试试把搜索范围调大一点，或换个料理类型。']
+              : ['暂时没有这类示范餐厅', '试试换个料理类型，或直接输入地点搜索附近真实店家。'];
+  $('emptyState').querySelector('h3').textContent = emptyCopy[0];
+  $('emptyState').querySelector('p').textContent = emptyCopy[1];
+  const visibleCount = window.innerWidth <= 760 ? 2 : 6;
+  const canExpand = items.length > visibleCount;
   if (!canExpand) restaurantsExpanded = false;
   $('restaurantGrid').classList.toggle('is-collapsed', canExpand && !restaurantsExpanded);
   $('restaurantMore').classList.toggle('hidden', !canExpand);
   $('restaurantMoreButton').setAttribute('aria-expanded', String(restaurantsExpanded));
   $('restaurantMoreText').textContent = restaurantsExpanded
     ? '收起餐厅列表'
-    : `展开更多餐厅（还有 ${items.length - 2} 家）`;
+    : `展开更多餐厅（还有 ${items.length - visibleCount} 家）`;
   $('restaurantMoreButton').querySelector('.restaurant-more-icon').textContent = restaurantsExpanded ? '⌃' : '⌄';
   $('resultSummary').textContent = placesLoading
     ? `正在搜索「${placesLocationName}」${$('radius').value} 公里内的真实美食…`
     : placesError
       ? '免费地图查询服务暂时无法载入。'
         : livePlacesSearch
-          ? `在「${placesLocationName}」${$('radius').value} 公里内找到 ${items.length} 个地图餐饮地点${budget !== null ? ' · 地图没有餐点价格，预算暂不筛掉结果' : ''}`
-    : `找到 ${items.length} 个示范选择 · 搜索范围 ${$('radius').value} 公里`;
+          ? `在「${placesLocationName}」${$('radius').value} 公里内找到 ${livePlacesTotal} 个地图餐饮地点${livePlacesTotal > items.length ? `（显示最近 ${items.length} 个）` : ''}${budget !== null ? ' · 地图没有餐点价格，预算暂不筛掉结果' : ''}`
+    : `${items.length} 个示范选择（非真实店家）· 想看附近真实店家，请在上方输入地点或使用定位`;
+  $('searchBtn').innerHTML = livePlacesSearch
+    ? '按新条件重新搜索附近 <span>→</span>'
+    : '给我吃饭灵感 <span>→</span>';
+  $('backToDemoBtn').classList.toggle('hidden', !livePlacesSearch);
   $('mapAttribution').classList.toggle('hidden',!livePlacesSearch||placesLoading||placesError||items.length===0);
+  $('geoapifyAttribution').classList.toggle('hidden',lastPlacesSource!=='geoapify');
   [...$('sort').options].forEach(option=>{
     option.disabled=livePlacesSearch&&['price','price-desc','time','time-desc'].includes(option.value);
   });
   if(livePlacesSearch&&['price','price-desc','time','time-desc'].includes($('sort').value)){
     $('sort').value='distance';
   }
+}
+function getDemoEmptyReason() {
+  const type = $('cuisine').value;
+  const budget = $('budget').value === '' ? null : Number($('budget').value);
+  const radius = Number($('radius').value);
+  const byType = demoRestaurants.filter(r => !type || r.type === type);
+  const byTypeAndRadius = byType.filter(r => r.distance <= radius);
+  if (byTypeAndRadius.length && budget !== null) return 'budget';
+  if (byType.length) return 'radius';
+  return 'cuisine';
+}
+function syncQuickBudgetButtons() {
+  const value = $('budget').value;
+  document.querySelectorAll('[data-budget]').forEach(button => {
+    button.classList.toggle('active', value !== '' && Number(button.dataset.budget) === Number(value));
+  });
+}
+function exitLiveMode() {
+  placesSearchId+=1;
+  livePlacesSearch=false;
+  userPosition=null;
+  nearbyPlacesCache=[];
+  nearbyCacheCenter=null;
+  nearbyCacheRadius=0;
+  livePlacesTotal=0;
+  placesLoading=false;
+  placesError=false;
+  placesNoResults=false;
+  $('locateBtn').disabled=false;
+  $('searchLocationBtn').disabled=false;
+  $('searchBtn').disabled=false;
 }
 function search() {
   if (livePlacesSearch) {
@@ -244,7 +297,7 @@ function search() {
   placesLoading=false;
   placesError=false;
   placesNoResults=false;
-  $('resultsNotice').innerHTML = '<span>ⓘ</span> 餐厅、价格和距离目前都是示范资料，不代表真实附近商家；输入地点或使用定位，可查询 OpenStreetMap 登记的餐饮地点。';
+  $('resultsNotice').innerHTML = '<span>ⓘ</span> 下方是<strong>示范店家</strong>，店名、价格和距离都不是真实的，只用来找吃饭灵感；在上方输入地点或使用定位，才会显示 OpenStreetMap 登记的附近真实餐饮地点。';
   $('mapAttribution').classList.add('hidden');
   sortResults();
   if(wheelMode==='nearby')syncNearbyWheelItems();
@@ -275,26 +328,40 @@ $('restaurantMoreButton').addEventListener('click', () => {
   restaurantsExpanded = !restaurantsExpanded;
   sortResults();
 });
-document.querySelectorAll('[data-budget]').forEach(btn => btn.addEventListener('click',()=>{$('budget').value=btn.dataset.budget;document.querySelectorAll('[data-budget]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');search();}));
-$('clearBudget').addEventListener('click',()=>{$('budget').value='';document.querySelectorAll('[data-budget]').forEach(b=>b.classList.remove('active'));search();});
+// 预算只影响示范资料；真实地图地点没有价格，所以在真实搜索模式下不重新查询。
+function onBudgetChanged() {
+  syncQuickBudgetButtons();
+  if (livePlacesSearch) sortResults();
+  else search();
+}
+document.querySelectorAll('[data-budget]').forEach(btn => btn.addEventListener('click',()=>{$('budget').value=btn.dataset.budget;onBudgetChanged();}));
+$('clearBudget').addEventListener('click',()=>{$('budget').value='';onBudgetChanged();});
+$('budget').addEventListener('input',()=>{
+  syncQuickBudgetButtons();
+  clearTimeout(budgetInputTimer);
+  budgetInputTimer=setTimeout(onBudgetChanged,350);
+});
 $('resetFilters').addEventListener('click',()=>{
   $('cuisine').value='';
   $('budget').value='';
-  $('radius').value='25';
-  placesSearchId+=1;
-  livePlacesSearch=false;
-  userPosition=null;
-  nearbyPlacesCache=[];
-  nearbyCacheCenter=null;
-  nearbyCacheRadius=0;
-  placesLoading=false;
-  placesError=false;
-  placesNoResults=false;
+  $('radius').value=DEFAULT_RADIUS;
+  syncQuickBudgetButtons();
+  exitLiveMode();
   $('locationStatus').textContent='筛选已清除，可查看示范推荐或搜索 OpenStreetMap。';
-  $('locateBtn').disabled=false;
-  $('searchLocationBtn').disabled=false;
-  $('searchBtn').disabled=false;
   search();
+});
+$('backToDemoBtn').addEventListener('click',()=>{
+  exitLiveMode();
+  $('locationStatus').textContent='已切换回示范推荐；输入地点或使用定位可再次搜索附近真实店家。';
+  search();
+});
+let lastLayoutIsMobile = window.innerWidth <= 760;
+window.addEventListener('resize',()=>{
+  const isMobile = window.innerWidth <= 760;
+  if (isMobile !== lastLayoutIsMobile) {
+    lastLayoutIsMobile = isMobile;
+    sortResults();
+  }
 });
 $('locateBtn').addEventListener('click',()=>{
   placesSearchId+=1;
@@ -349,7 +416,18 @@ async function searchNearbyPlaces(position, locationName, requestId=++placesSear
   sortResults();
   if(wheelMode==='nearby')syncNearbyWheelItems();
   try{
-    const response=await fetchOsmRestaurants(position,radiusKm);
+    const response=await fetchNearbyPlaces(position,radiusKm,({source,attempt,total,seconds})=>{
+      if(requestId!==placesSearchId)return;
+      if(source==='geoapify'){
+        $('locationStatus').textContent=`正在搜索「${locationName}」${radiusKm} 公里内的真实美食…`;
+        return;
+      }
+      const backup=GEOAPIFY_API_KEY?'快速查询暂时不可用，改用备用服务；':'';
+      const server=attempt>1?`（第 ${attempt}/${total} 个查询服务）`:'';
+      $('locationStatus').textContent=seconds<6
+        ?`${backup}正在搜索「${locationName}」${radiusKm} 公里内的真实美食…${server}`
+        :`${backup}免费地图服务有点忙，已等待 ${seconds} 秒，通常 30–50 秒内会有结果…${server}`;
+    });
     if(requestId!==placesSearchId)return;
     nearbyPlacesCache=response
       .map(place=>toOsmRestaurant(place,position))
@@ -381,26 +459,105 @@ async function searchNearbyPlaces(position, locationName, requestId=++placesSear
 function applyNearbyPlaceFilters() {
   const radiusKm=Number($('radius').value);
   const cuisine=$('cuisine').value;
-  visibleRestaurants=nearbyPlacesCache
+  const matched=nearbyPlacesCache
     .filter(place=>place.distance<=radiusKm&&placeMatchesCuisine(place,cuisine))
     .sort((a,b)=>a.distance-b.distance);
+  livePlacesTotal=matched.length;
+  visibleRestaurants=matched.slice(0,MAX_LIVE_RESULTS);
   placesNoResults=visibleRestaurants.length===0;
   $('locationStatus').textContent=placesNoResults
     ?`「${placesLocationName}」${radiusKm} 公里内没有找到符合筛选的地图餐饮地点；地图资料可能不完整。`
-    :`在「${placesLocationName}」${radiusKm} 公里内找到 ${visibleRestaurants.length} 个地图餐饮地点。`;
+    :`在「${placesLocationName}」${radiusKm} 公里内找到 ${livePlacesTotal} 个地图餐饮地点${livePlacesTotal>visibleRestaurants.length?`，显示最近的 ${visibleRestaurants.length} 个`:''}。`;
   $('resultsNotice').innerHTML='<span>ⓘ</span> 地点资料来自 OpenStreetMap 贡献者；登记情况不完整，结果不代表该区域全部餐厅。距离为直线估算，地图没有餐点价格或实时营业状态；预算筛选不会影响结果。点店名地图链接可查看 OSM 地点。';
   sortResults();
   if(wheelMode==='nearby')syncNearbyWheelItems();
 }
-async function fetchOsmRestaurants(position,radiusKm) {
-  const query=`[out:json][timeout:25];(nwr(around:${Math.round(radiusKm*1000)},${position.lat},${position.lng})["amenity"~"^(restaurant|fast_food|cafe|food_court)$"];nwr(around:${Math.round(radiusKm*1000)},${position.lat},${position.lng})["shop"="bakery"];);out tags center;`;
+// 免费的 Overpass 服务经常排队，实测成功的查询也可能要 30–50 秒，
+// 所以第一个服务多等一些；失败（满载 / 限流 / 超时）再换下一个。
+// ---- Geoapify（主力）：资料同样来自 OpenStreetMap，但服务器稳定、通常 1–2 秒返回 ----
+const GEOAPIFY_CATEGORIES=[
+  'catering.restaurant','catering.fast_food','catering.cafe','catering.food_court',
+  'catering.ice_cream','commercial.food_and_drink.bakery'
+].join(',');
+const GEOAPIFY_LIMIT=100; // 约 5 点额度 / 次；免费方案每天 3000 点
+const osmTypeNames={n:'node',w:'way',r:'relation',node:'node',way:'way',relation:'relation'};
+function geoapifyAmenity(categories) {
+  const list=categories||[];
+  if(list.some(c=>c.startsWith('catering.fast_food')))return 'fast_food';
+  if(list.some(c=>c.startsWith('catering.cafe')))return 'cafe';
+  if(list.some(c=>c.startsWith('catering.food_court')))return 'food_court';
+  if(list.some(c=>c.startsWith('catering.ice_cream')))return 'ice_cream';
+  if(list.some(c=>c.startsWith('catering.restaurant')))return 'restaurant';
+  return undefined;
+}
+// 把 Geoapify 的 GeoJSON 转成和 Overpass 一样的 {type,id,lat,lon,tags}，后面的代码就不用改。
+function geoapifyFeatureToElement(feature) {
+  const p=feature.properties||{};
+  const raw=p.datasource?.raw||{};
+  const lat=Number(p.lat??feature.geometry?.coordinates?.[1]);
+  const lon=Number(p.lon??feature.geometry?.coordinates?.[0]);
+  const tags={...raw};
+  for(const key of ['osm_type','osm_id'])delete tags[key];
+  tags.name=tags.name||p.name;
+  tags.amenity=tags.amenity||geoapifyAmenity(p.categories);
+  if(!tags.shop&&(p.categories||[]).includes('commercial.food_and_drink.bakery'))tags.shop='bakery';
+  if(!tags.cuisine&&p.catering?.cuisine)tags.cuisine=p.catering.cuisine;
+  tags['addr:street']=tags['addr:street']||p.street;
+  tags['addr:suburb']=tags['addr:suburb']||p.suburb;
+  tags['addr:city']=tags['addr:city']||p.city;
+  return {
+    type:osmTypeNames[raw.osm_type]||'node',
+    id:raw.osm_id??p.place_id,
+    hasOsmId:raw.osm_id!=null,
+    lat,lon,tags
+  };
+}
+async function fetchGeoapifyRestaurants(position,radiusKm) {
+  const params=new URLSearchParams({
+    categories:GEOAPIFY_CATEGORIES,
+    filter:`circle:${position.lng},${position.lat},${Math.round(radiusKm*1000)}`,
+    bias:`proximity:${position.lng},${position.lat}`,
+    limit:String(GEOAPIFY_LIMIT),
+    apiKey:GEOAPIFY_API_KEY
+  });
+  const response=await fetch(`https://api.geoapify.com/v2/places?${params}`,{signal:AbortSignal.timeout?AbortSignal.timeout(15000):undefined});
+  if(!response.ok)throw new Error(`Geoapify returned HTTP ${response.status}`);
+  const result=await response.json();
+  if(!Array.isArray(result.features))throw new Error('Geoapify response did not contain features.');
+  return result.features.map(geoapifyFeatureToElement);
+}
+let lastPlacesSource='overpass';
+async function fetchNearbyPlaces(position,radiusKm,onProgress=()=>{}) {
+  if(GEOAPIFY_API_KEY){
+    try{
+      onProgress({source:'geoapify'});
+      const elements=await fetchGeoapifyRestaurants(position,radiusKm);
+      lastPlacesSource='geoapify';
+      return elements;
+    }catch(error){
+      // 额度用完（429）、key 错误（401/403）或网络问题 → 退回免费的 Overpass
+      console.warn('Geoapify query failed, falling back to Overpass:',error);
+    }
+  }
+  const elements=await fetchOsmRestaurants(position,radiusKm,progress=>onProgress({source:'overpass',...progress}));
+  lastPlacesSource='overpass';
+  return elements;
+}
+
+// ---- Overpass（后备）：完全免费但经常排队 ----
+const OVERPASS_TIMEOUTS_MS=[50000,30000,30000];
+async function fetchOsmRestaurants(position,radiusKm,onProgress=()=>{}) {
+  const query=`[out:json][timeout:45];(nwr(around:${Math.round(radiusKm*1000)},${position.lat},${position.lng})["amenity"~"^(restaurant|fast_food|cafe|food_court)$"];nwr(around:${Math.round(radiusKm*1000)},${position.lat},${position.lng})["shop"="bakery"];);out tags center;`;
   let lastError;
-  for(const endpoint of overpassEndpoints){
+  for(const [index,endpoint] of overpassEndpoints.entries()){
     const controller=new AbortController();
-    const timeout=setTimeout(()=>controller.abort(),12000);
+    const timeout=setTimeout(()=>controller.abort(),OVERPASS_TIMEOUTS_MS[index]??30000);
+    const startedAt=Date.now();
+    onProgress({attempt:index+1,total:overpassEndpoints.length,seconds:0});
+    const ticker=setInterval(()=>onProgress({attempt:index+1,total:overpassEndpoints.length,seconds:Math.round((Date.now()-startedAt)/1000)}),1000);
     try{
       const url=`${endpoint}?data=${encodeURIComponent(query)}`;
-      const response=await fetch(url,{signal:controller.signal,headers:{Accept:'application/json'}});
+      const response=await fetch(url,{signal:controller.signal});
       if(!response.ok)throw new Error(`Overpass returned HTTP ${response.status}`);
       const result=await response.json();
       if(!Array.isArray(result.elements))throw new Error('Overpass response did not contain an elements list.');
@@ -410,6 +567,7 @@ async function fetchOsmRestaurants(position,radiusKm) {
       console.warn(`OpenStreetMap query endpoint failed (${endpoint}):`,error);
     }finally{
       clearTimeout(timeout);
+      clearInterval(ticker);
     }
   }
   const failure=new Error('All OpenStreetMap query endpoints failed.');
@@ -467,7 +625,7 @@ async function searchByAddress() {
       return;
     }
     const position={lat:Number(match.lat),lng:Number(match.lon)};
-    const resolvedName=match.display_name||address;
+    const resolvedName=shortPlaceName(match.display_name,address);
     await searchNearbyPlaces(position,resolvedName,requestId);
   }catch(error){
     if(requestId!==placesSearchId)return;
@@ -502,7 +660,7 @@ const wheelColors=['#ff9c4d','#ffc078','#f47a36','#ffb15e','#f28c55','#ffd08a','
 const malaysianFoods=[
   '海南鸡饭','椰浆饭炸鸡','咖喱鸡椰浆饭','杂菜饭','Nasi Kandar 炸鸡饭',
   '肉骨茶配饭','印度香饭 Biryani','牛肉仁当饭','砂煲鸡饭',
-  '虾面','咖喱面','辣椒板面','云吞面','福建炒面','炒粿条','叻沙','Mee Siam',
+  '咖喱面','辣椒板面','云吞面','福建炒面','炒粿条','叻沙','Mee Siam',
   '甘榜炒饭','Mamak 炒面','泰式打抛猪肉饭','泰式鸡肉炒河粉 Pad Thai',
   '泰式绿咖喱鸡饭','日式豚骨拉面','日式炸鸡咖喱饭','日式牛肉饭 Gyudon',
   '韩式拌饭 Bibimbap','韩式烤牛肉饭 Bulgogi','韩式泡菜锅配饭',
@@ -579,7 +737,8 @@ function randomizeMalaysianWheelItems() {
   $('wheelResult').textContent='30 种饱腹正餐已加入转盘，看看今天的好运会选中什么！';
 }
 function syncNearbyWheelItems() {
-  nearbyWheelItems=visibleRestaurants.map(restaurant=>({
+  // 真实地点可能有几十家；只把最近 / 排在最前的 20 家放进转盘，避免转盘全是编号。
+  nearbyWheelItems=visibleRestaurants.slice(0,MAX_WHEEL_ITEMS).map(restaurant=>({
     label:restaurant.name,
     name:restaurant.name,
     typeName:restaurant.typeName,
@@ -593,9 +752,22 @@ function syncNearbyWheelItems() {
     distance:restaurant.distance
   }));
   $('wheelNearbySummary').textContent=nearbyWheelItems.length
-    ?`已加入 ${nearbyWheelItems.length} 个当前${nearbyWheelItems.some(item=>item.actual)?'地点':'示范选择'}：${nearbyWheelItems.map((item,index)=>`${index+1}. ${item.name}`).join('、')}`
+    ?`已加入${visibleRestaurants.length>nearbyWheelItems.length?`列表前 `:' '}${nearbyWheelItems.length} 个当前${nearbyWheelItems.some(item=>item.actual)?'地点':'示范选择'}：${nearbyWheelItems.map((item,index)=>`${index+1}. ${item.name}`).join('、')}`
     :'目前列表没有餐厅；请搜索附近真实地点，或切换回示范推荐。';
   if(wheelMode==='nearby')updateWheelGraphic();
+}
+const foodEmojiRules=[
+  [/寿司|sushi|刺身/i,'🍣'],[/拉面|ramen|乌冬|udon/i,'🍜'],[/火锅|steamboat|麻辣烫|锅/i,'🍲'],
+  [/汉堡|burger/i,'🍔'],[/披萨|pizza/i,'🍕'],[/炸鸡|鸡翅|fried chicken/i,'🍗'],
+  [/咖喱|curry|kari/i,'🍛'],[/面|粉|粿条|mee|noodle|pad thai|laksa|叻沙|maggi/i,'🍜'],
+  [/饭|nasi|rice|biryani|bibimbap|丼|gyudon/i,'🍚'],[/饺|dumpling|点心|dim sum/i,'🥟'],
+  [/沙拉|salad|轻食/i,'🥗'],[/三明治|sandwich|面包|bread|roti|煎饼/i,'🥪'],
+  [/海鲜|鱼|虾|seafood|fish|prawn/i,'🦐'],[/肉|bbq|烧烤|steak|牛排/i,'🍖'],
+  [/咖啡|coffee|茶|tea/i,'🧋'],[/蛋糕|甜品|cake|dessert|冰淇淋|ice cream/i,'🍰']
+];
+function foodEmoji(label) {
+  const match=foodEmojiRules.find(([pattern])=>pattern.test(label||''));
+  return match?match[1]:'🍽️';
 }
 function closeWinnerDialog() {
   $('winnerOverlay').classList.add('hidden');
@@ -604,7 +776,7 @@ function closeWinnerDialog() {
 function celebrateWinner(item, mode) {
   const isRestaurant=mode==='nearby';
   $('winnerIcon').classList.toggle('has-art',isRestaurant);
-  $('winnerIcon').innerHTML=isRestaurant?renderFoodArt(item.art,item.dish):'🍜';
+  $('winnerIcon').innerHTML=isRestaurant?renderFoodArt(item.art,item.dish):foodEmoji(item.label);
   $('winnerName').textContent=isRestaurant?item.name:item.label;
   const dish=isRestaurant?item.dish.replace(/\s*RM[\d.]+\s*$/,''):'';
   $('winnerDescription').textContent=isRestaurant
@@ -682,7 +854,14 @@ function startWheelSpin() {
   const chosenIndex=Math.floor(Math.random()*items.length);
   const chosen=items[chosenIndex];
   const slice=360/items.length;
-  wheelRotation+=1800+Math.floor(Math.random()*720)+360-(chosenIndex+.5)*slice;
+  // 指针在正上方（0°）。转盘顺时针旋转 R 度后，第 i 格中心落在 (i+.5)*slice+R。
+  // 要让它停在 0°，最终角度 mod 360 必须等于 360-(i+.5)*slice。
+  // 在格子内随机偏移一点（不碰边界），看起来更自然，又不会停在两格交界。
+  const jitter=(Math.random()-.5)*slice*.6;
+  const targetAngle=((360-(chosenIndex+.5)*slice+jitter)%360+360)%360;
+  const currentAngle=((wheelRotation%360)+360)%360;
+  const extraTurns=reducedMotion.matches?1:5+Math.floor(Math.random()*3);
+  wheelRotation+=extraTurns*360+((targetAngle-currentAngle+360)%360);
   $('wheelGraphic').style.transform=`rotate(${wheelRotation}deg)`;
   $('wheelGraphic').querySelector('.wheel-center').style.transform=`translate(-50%,-50%) rotate(${-wheelRotation}deg)`;
   setTimeout(()=>{
@@ -698,7 +877,7 @@ function startWheelSpin() {
     $('wheelCenter').setAttribute('aria-label','再转一次');
     $('wheelCenter').innerHTML='再转<br>一次';
     spinning=false;
-  },3600);
+  },reducedMotion.matches?250:3600);
 }
 $('spinBtn').addEventListener('click',startWheelSpin);
 $('wheelCenter').addEventListener('click',startWheelSpin);

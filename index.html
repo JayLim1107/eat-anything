@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FF7A1A" />
   <meta name="description" content="不知道午餐晚餐吃什么？输入地点或使用定位，在网页内搜索附近真实餐厅，再让幸运转盘帮你决定。" />
-  <title>吃什么都可以｜今天吃什么？</title>
+  <title>随便吃｜今天吃什么？</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
   <header class="topbar">
     
 <a class="brand" href="#top" aria-label="随便吃">
+  <span class="brand-mark" aria-hidden="true">吃</span>
   <span class="brand-name">
     随便<span class="brand-orange">吃</span>
   </span>
@@ -56,6 +57,9 @@
         class="hero-ramen"
         src="./src/ramen-hero.png"
         alt="美味日式拉面"
+        width="1120"
+        height="727"
+        fetchpriority="high"
       />
       <div class="hero-food-floats">
         <span class="food-float food-float-one" data-art="rice-meal" data-label="彩色饭团插画"></span>
@@ -80,13 +84,13 @@
         <label class="field"><span>搜索范围</span><select id="radius"><option value="3">3 公里</option><option value="5">5 公里</option><option value="10">10 公里</option><option value="15">15 公里</option><option value="20">20 公里</option><option value="25">25 公里</option></select></label>
       </div>
       <div class="quick-budgets"><span>快速预算：</span><button data-budget="10">RM10</button><button data-budget="15">RM15</button><button data-budget="20">RM20</button><button data-budget="30">RM30</button><button id="clearBudget" class="clear-btn">不限预算</button></div>
-      <div class="panel-actions"><button class="btn btn-primary" id="searchBtn">给我吃饭灵感 <span>→</span></button><button class="btn btn-light" id="locateBtn">⌖ 搜索我附近的美食</button><label class="manual-location-search" for="locationInput"><span>输入城市、地区或地址</span><div class="manual-location-controls"><input id="locationInput" type="search" placeholder="例如：Taman Molek、KLCC、槟城乔治市" autocomplete="street-address"><button class="btn btn-light" id="searchLocationBtn" type="button">在网页找附近美食</button></div></label><span id="locationStatus" class="location-status">使用免费的 OpenStreetMap 地图资料查找附近餐饮地点。</span></div>
+      <div class="panel-actions"><button class="btn btn-primary" id="searchBtn" type="button">给我吃饭灵感 <span>→</span></button><button class="btn btn-light hidden" id="backToDemoBtn" type="button">↺ 返回示范推荐</button><button class="btn btn-light" id="locateBtn">⌖ 搜索我附近的美食</button><label class="manual-location-search" for="locationInput"><span>输入城市、地区或地址</span><div class="manual-location-controls"><input id="locationInput" type="search" placeholder="例如：Taman Molek、KLCC、槟城乔治市" autocomplete="street-address"><button class="btn btn-light" id="searchLocationBtn" type="button">在网页找附近美食</button></div></label><span id="locationStatus" class="location-status">使用免费的 OpenStreetMap 地图资料查找附近餐饮地点。</span></div>
     </section>
 
     <section class="results-section" id="results">
-      <div class="results-title"><div><div class="section-kicker">FOOD INSPIRATION</div><h2>先找点吃饭灵感？</h2><p id="resultSummary">以下餐厅名称、价格和距离均为示范资料。</p></div><div class="sort-wrap"><label for="sort">排序方式</label><select id="sort"><option value="recommended">推荐排序</option><option value="price">价格由低到高</option><option value="price-desc">价格由高到低</option><option value="distance">距离由近到远</option><option value="distance-desc">距离由远到近</option><option value="time">抵达时间最短</option><option value="time-desc">抵达时间最长</option></select></div></div>
-      <div class="notice" id="resultsNotice"><span>ⓘ</span> 下方餐厅、价格和距离是示范资料，不代表真实附近商家；搜索后会在网页中显示 OpenStreetMap 中登记的餐饮地点。</div>
-      <div class="map-attribution hidden" id="mapAttribution"><span>地图资料 ©</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap 贡献者</a><span>依照 Open Database License (ODbL) 使用；资料可能不完整。</span></div>
+      <div class="results-title"><div><div class="section-kicker">FOOD INSPIRATION</div><h2>先找点吃饭灵感？</h2><p id="resultSummary">以下餐厅名称、价格和距离均为示范资料（非真实店家）。</p></div><div class="sort-wrap"><label for="sort">排序方式</label><select id="sort"><option value="recommended">推荐排序</option><option value="price">价格由低到高</option><option value="price-desc">价格由高到低</option><option value="distance">距离由近到远</option><option value="distance-desc">距离由远到近</option><option value="time">抵达时间最短</option><option value="time-desc">抵达时间最长</option></select></div></div>
+      <div class="notice" id="resultsNotice"><span>ⓘ</span> 下方是<strong>示范店家</strong>，店名、价格和距离都不是真实的，只用来找吃饭灵感；在上方输入地点或使用定位，才会显示 OpenStreetMap 登记的附近真实餐饮地点。</div>
+      <div class="map-attribution hidden" id="mapAttribution"><span>地图资料 ©</span><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap 贡献者</a><span>依照 Open Database License (ODbL) 使用；资料可能不完整。</span><span class="hidden" id="geoapifyAttribution">· 查询服务 <a href="https://www.geoapify.com/" target="_blank" rel="noopener noreferrer">Powered by Geoapify</a></span></div>
       <div class="restaurant-grid" id="restaurantGrid" aria-live="polite"></div>
       <div class="restaurant-more hidden" id="restaurantMore">
         <button class="restaurant-more-button" id="restaurantMoreButton" type="button" aria-controls="restaurantGrid" aria-expanded="false">
@@ -137,6 +141,18 @@
         <article><span>03</span><h3>让幸运转盘决定</h3><p>加入当前推荐、随机抽 30 种饱腹正餐，或自己输入选项。</p></article>
       </div>
     </section>
+    <section class="donate-section" id="donate" aria-labelledby="donateTitle">
+      <div class="donate-copy">
+        <div class="section-kicker">SUPPORT THIS LITTLE PROJECT</div>
+        <h2 id="donateTitle">今天吃什么解决了吗？</h2>
+        <p>如果这个小工具帮你决定了午餐或晚餐，欢迎随心支持一下，RM1 或更多都很感谢。你的支持会帮我继续把它做好；当然，不捐也没关系，照样欢迎来找吃的！</p>
+        <p class="donate-thanks">请我吃一口电子鸡饭，我就有动力继续更新啦 ♡</p>
+      </div>
+      <div class="donate-qr-card">
+        <img class="donate-qr-image" src="./src/tng-qr.png" alt="Touch ’n Go Malaysia National QR 捐款码" width="364" height="406" />
+        <span>可用银行或电子钱包 App 扫码支持</span>
+      </div>
+    </section>
 </main>
 
   <div class="winner-overlay hidden" id="winnerOverlay">
@@ -154,18 +170,6 @@
     </section>
   </div>
 
-  <section class="donate-section" id="donate" aria-labelledby="donateTitle">
-    <div class="donate-copy">
-      <div class="section-kicker">SUPPORT THIS LITTLE PROJECT</div>
-      <h2 id="donateTitle">今天吃什么解决了吗？</h2>
-      <p>如果这个小工具帮你决定了午餐或晚餐，欢迎随心支持一下，RM1 或更多都很感谢。你的支持会帮我继续把它做好；当然，不捐也没关系，照样欢迎来找吃的！</p>
-      <p class="donate-thanks">请我吃一口电子鸡饭，我就有动力继续更新啦 ♡</p>
-    </div>
-    <div class="donate-qr-card">
-      <img class="donate-qr-image" src="./src/tng-qr.png" alt="Touch ’n Go Malaysia National QR 捐款码" width="364" height="406" />
-      <span>可用银行或电子钱包 App 扫码支持</span>
-    </div>
-  </section>
 
   <footer><a class="brand" href="#top"><span class="brand-mark">吃</span>
 <span class="brand-name">随便<span class="brand-orange">吃</span></span></a><p>让每一餐，都更容易决定。<br><a class="footer-donate" href="#donate">喜欢这个小工具？随心支持 Donate ↗</a><br><span class="footer-feedback">有反馈或想改进的地方？欢迎 <a href="mailto:limjoonwei123@gmail.com">Email 联系我</a></span><br><small>Prototype · Malaysia</small></p></footer>
